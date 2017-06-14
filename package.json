@@ -8,7 +8,9 @@
     "bundle": "typings bundle -o bundle.d.ts",
     "exec": "npm run test",
     "test": "npm run lint && npm run bundle",
-    "test-e2e": "ts-node test.ts"
+    "test-e2e": "ts-node test.ts",
+    "prepublish": "typings install",
+    "postpublish": "greenkeeper-postpublish"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   },
   "homepage": "https://github.com/marshall007/npm-rethinkdbdash#readme",
   "devDependencies": {
+    "greenkeeper-postpublish": "^1.0.1",
     "rethinkdbdash": "^2.3.29",
     "ts-node": "^2.0.0",
     "tslint": "^4.3.1",
