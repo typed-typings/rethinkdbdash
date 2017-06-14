@@ -2,12 +2,13 @@
   "name": "@types/rethinkdbdash",
   "version": "2.3.0",
   "description": "Types for https://github.com/neumino/rethinkdbdash",
-  "typings": "rethinkdb.d.ts",
+  "typings": "rethinkdbdash.d.ts",
   "scripts": {
-    "lint": "tslint test.ts rethink.d.ts",
+    "lint": "tslint test.ts rethinkdbdash.d.ts",
     "bundle": "typings bundle -o bundle.d.ts",
-    "exec": "ts-node test.ts",
-    "test": "npm run lint && npm run bundle && npm run exec"
+    "exec": "npm run test",
+    "test": "npm run lint && npm run bundle",
+    "test-e2e": "ts-node test.ts"
   },
   "repository": {
     "type": "git",
