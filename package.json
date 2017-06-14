@@ -2,12 +2,15 @@
   "name": "@types/rethinkdbdash",
   "version": "2.3.0",
   "description": "Types for https://github.com/neumino/rethinkdbdash",
-  "typings": "rethinkdb.d.ts",
+  "typings": "rethinkdbdash.d.ts",
   "scripts": {
-    "lint": "tslint test.ts rethink.d.ts",
+    "lint": "tslint test.ts rethinkdbdash.d.ts",
     "bundle": "typings bundle -o bundle.d.ts",
-    "exec": "ts-node test.ts",
-    "test": "npm run lint && npm run bundle && npm run exec"
+    "exec": "npm run test",
+    "test": "npm run lint && npm run bundle",
+    "test-e2e": "ts-node test.ts",
+    "prepublish": "typings install",
+    "postpublish": "greenkeeper-postpublish"
   },
   "repository": {
     "type": "git",
@@ -23,11 +26,17 @@
   },
   "homepage": "https://github.com/marshall007/npm-rethinkdbdash#readme",
   "devDependencies": {
+    "greenkeeper-postpublish": "^1.0.1",
     "rethinkdbdash": "^2.3.29",
     "ts-node": "^2.0.0",
     "tslint": "^4.3.1",
     "tslint-config-typings": "^0.3.1",
     "typescript": "^2.1.5",
     "typings": "^2.1.0"
+  },
+  "dependencies": {
+    "@types/bluebird": "^3.4.1",
+    "@types/node": "^6.0.78",
+    "@types/rethinkdb": "github:types/npm-rethinkdb"
   }
 }
