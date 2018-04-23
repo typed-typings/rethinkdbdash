@@ -37,6 +37,6 @@
   "dependencies": {
     "@types/bluebird": "^3.4.1",
     "@types/node": "^6.0.78",
-    "@types/rethinkdb": "github:types/npm-rethinkdb"
+    "@types/rethinkdb": "https://github.com/types/npm-rethinkdb/tarball/master"
   }
 }
